@@ -1,6 +1,6 @@
 #Rotina para coletar algumas séries do FRED
 #Feito por: Felipe Simplício Ferreira
-#última atualização: 26/10/2019
+#última atualização: 10/11/2020
 
 
 #Definindo diretórios a serem utilizados
@@ -10,6 +10,7 @@ setwd("C:/Users/User/Documents")
 
 #Carregando pacotes que serão utilizados
 library("fredr")
+#library(rio) #Para exportar em formato xlsx
 
 #Criando função para coleta de séries
 coleta_dados_fred = function(series, datainicial="2018-01-01", datafinal = format(Sys.time(), "%Y-%m-%d")){
@@ -43,3 +44,4 @@ serie = c("ALTSALES", "AWHAETP", "CES0500000003", "CES0500000011", "CIVPART", "C
 ex = coleta_dados_fred(serie) #Criando objeto em que ficam guardados as séries
 
 write.csv2(ex, "exemplo.csv", row.names = F) #Salvando arquivo csv em padrão brasileiro
+#export(ex, "exemplo.xlsx") #Salvando em formato xlsx
