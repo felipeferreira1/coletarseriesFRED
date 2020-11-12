@@ -43,5 +43,5 @@ coleta_dados_fred = function(series, datainicial="2018-01-01", datafinal = forma
 serie = c("ALTSALES", "AWHAETP", "CES0500000003", "CES0500000011", "CIVPART", "CPIAUCSL", "CPILFESL", "CUSR0000SEHA", "CUSR0000SEHC", "EXHOSLUSM495S", "GS10", "HOUST", "HSN1F", "INDPRO", "IPMANSICS", "IPMINE", "IPUTIL", "PAYEMS", "PCEPI", "PCEPILFE", "PERMIT", "RSAFS", "RSXFS", "SPCS20RNSA", "SPCS20RSA", "TTLCONS", "TWEXMMTH", "TWEXMPA", "U6RATE", "UNRATE")
 ex = coleta_dados_fred(serie) #Criando objeto em que ficam guardados as séries
 
-write.csv2(ex, "exemplo.csv", row.names = F) #Salvando arquivo csv em padrão brasileiro
-#export(ex, "exemplo.xlsx") #Salvando em formato xlsx
+write.csv2(ex, "Exemplo.csv", row.names = F) #Salvando arquivo csv em padrão brasileiro
+#export(ex, "Exemplo.xlsx") #Salvando em formato xlsx
